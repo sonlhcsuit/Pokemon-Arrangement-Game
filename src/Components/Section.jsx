@@ -1,0 +1,13 @@
+import '../assets/css/Section.css'
+export function Section(props) {
+    return (
+        <div className="section-cont">
+            <div className={` type-cont ${props.type}`}>
+                <p>{props.type || 'Fire'}</p>
+            </div>
+            <div className="pokemon-cont">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum cumque perspiciatis expedita exercitationem quam, iusto vel inventore. Voluptatibus veniam quam asperiores quas in non alias ullam minus consequuntur quae libero perspiciatis molestiae, dicta reiciendis ipsam explicabo esse magni vero fugit vel quos sequi nihil perferendis iste? Aliquam inventore minus voluptatum obcaecati veniam, totam iste voluptatem corrupti explicabo quisquam esse ab repudiandae eius culpa tempora quod ipsum id et accusamus ullam. Quam illum fugiat corporis ratione, aliquam minus rem recusandae ipsum vel aperiam temporibus velit inventore nulla suscipit neque veritatis est. Ipsam doloremque fugiat ratione accusamus velit? Omnis dicta voluptate tempore natus delectus libero sapiente dolorem ducimus sed, dolorum maiores est temporibus quos ex rem minus voluptatum ab nisi corporis repellat ipsam voluptatem vitae? Quod, sint architecto quos tenetur veritatis ipsam cum maxime voluptatem. Sed voluptate consectetur dignissimos qui animi assumenda natus reiciendis, tempora exercitationem in architecto maxime itaque harum dolores ab consequatur autem sunt aperiam fugit modi iure incidunt. Recusandae expedita rem ab aspernatur rerum aliquam, maiores voluptatum vero at nisi iure beatae suscipit. Dolor aliquid velit asperiores corrupti maxime nobis quaerat distinctio excepturi fugiat aut non optio soluta officia, totam error. Nulla blanditiis sequi dolor velit eveniet quisquam ipsum esse quis vel aliquid voluptas quaerat ea ab quam harum ut excepturi repellat pariatur illo, quia recusandae corrupti. Quae debitis earum quidem sit vel ab id quam rem, sed velit? Aspernatur a eum atque cumque, commodi, voluptate minima in eligendi minus numquam consequuntur debitis fuga reprehenderit delectus quae, beatae architecto error voluptates unde tempora quod est iusto! Laudantium error iusto veniam quibusdam explicabo exercitationem labore delectus vel laborum odio quidem, ad corrupti distinctio nesciunt sint soluta saepe. Optio accusamus repellat nostrum. Expedita quidem beatae ipsum aperiam dolorum, natus explicabo quis molestiae velit. At, atque? Harum placeat sequi rerum cumque suscipit.
+            </div>
+        </div>
+    )
+}
