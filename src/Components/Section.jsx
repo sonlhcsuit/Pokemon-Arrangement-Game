@@ -8,18 +8,23 @@ export function Section(props) {
             </div>
             <div className="pokemons-cont"
                 onDrop={(e) => {
-                    console.log(e.dataTransfer.getData('from'), props.type)
+                    props.move(e.dataTransfer.getData('from'), props.type,e.dataTransfer.getData('indx'))
                 }}
                 onDragOver={(e) => {
                     e.preventDefault()
-                }}
-            >
+                }}>
                 {
-                    props.pokemons.map(pokemon => {
-                        return (
-                            <Pokemon {...pokemon} type={props.type} />
-                        )
+                    props[props.type].map((val, indx) => {
+                        if (val != 0) return indx
+                        return -1
                     })
+                        .filter(val => val !== -1)
+                        .map((val) => {
+                            console.log(val)
+                            return (
+                                <Pokemon {...props.pokemons[val]} indx={val} key={val} type={props.type} />
+                            )
+                        })
                 }
             </div>
         </div>

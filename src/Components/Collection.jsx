@@ -5,14 +5,20 @@ export function Collection(props) {
         <div className="border collection-cont"
             onDragOver={(e) => e.preventDefault()}
             onDrop={(e) => {
-                console.log(e.dataTransfer.getData('from'), props.type)
+                props.move(e.dataTransfer.getData('from'), props.type, e.dataTransfer.getData('indx'))
             }}>
             {
-                props.pokemons.map(pokemon => {
-                    return (
-                        <Pokemon {...pokemon} type={props.type}/>
-                    )
+                props.remain.map((val, indx) => {
+                    if (val != 0) return indx
+                    return -1
                 })
+                    .filter(val => val !== -1)
+                    .map((val) => {
+                        // console.log(val)
+                        return (
+                            <Pokemon {...props.pokemons[val]} key={val} indx={val} type={props.type} />
+                        )
+                    })
             }
         </div>
     )
