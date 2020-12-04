@@ -26,9 +26,15 @@
     text-transform: uppercase;
     font-weight: bolder;
 }
-.section-cont>.pokemon-cont{
+.pokemons-cont{
     width: 100%;
     height: 95%;
     overflow: scroll;
     border: #cfdfde solid 1px;
+}
+.pokemons-cont > .pokemon-cont{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
 }

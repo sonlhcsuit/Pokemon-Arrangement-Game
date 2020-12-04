@@ -1,13 +1,16 @@
 import '../assets/css/Collection.css'
 import { Pokemon } from './Pokemon'
 export function Collection(props) {
-    console.log(props.pokemons)
     return (
-        <div className="border collection-cont">
+        <div className="border collection-cont"
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+                console.log(e.dataTransfer.getData('from'), props.type)
+            }}>
             {
                 props.pokemons.map(pokemon => {
                     return (
-                        <Pokemon {...pokemon} />
+                        <Pokemon {...pokemon} type={props.type}/>
                     )
                 })
             }

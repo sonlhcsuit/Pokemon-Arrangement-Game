@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div className="border app-cont">
-        <Collection pokemons={pokemon} />
-        <SectionList />
+        <Collection pokemons={pokemon} type="remain" />
+        <SectionList pokemons={pokemon}  />
       </div>
     )
   }
