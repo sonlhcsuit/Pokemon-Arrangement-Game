@@ -8,16 +8,20 @@ export function Section(props) {
             </div>
             <div className="pokemons-cont"
                 onDrop={(e) => {
-                    props.move(e.dataTransfer.getData('from'), props.type,e.dataTransfer.getData('indx'))
+                    props.move(e.dataTransfer.getData('from'), props.type, e.dataTransfer.getData('indx'))
                 }}
                 onDragOver={(e) => {
                     e.preventDefault()
                 }}>
                 {
+                    // if value is zero (the pokemon i-th not in the list)
+                    // return -1 , otherwise return it's index
                     props[props.type].map((val, indx) => {
                         if (val != 0) return indx
                         return -1
                     })
+                        // select only not -1 
+
                         .filter(val => val !== -1)
                         .map((val) => {
                             console.log(val)
