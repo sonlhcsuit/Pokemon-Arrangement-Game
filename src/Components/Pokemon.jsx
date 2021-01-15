@@ -1,6 +1,6 @@
 import '../assets/css/Pokemon.css'
 export function Pokemon(props) {
-    console.log(props)
+    // console.log(props)
     return (
         // allow to drag pokemon image
         <div className="pokemon-cont"
