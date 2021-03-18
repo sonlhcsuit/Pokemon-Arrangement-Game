@@ -20,7 +20,7 @@ export function Section(props) {
                     // if value is zero (the pokemon i-th not in the list)
                     // return -1 , otherwise return it's index
                     props[props.type].map((val, indx) => {
-                        if (val != 0) return indx
+                        if (val !== 0) return indx
                         return -1
                     })
                         // select only not -1 
